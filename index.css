@@ -1,0 +1,197 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-image: url("mountain.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+/* Heading */
+h1 {
+    background-color: aqua;
+    color: brown;
+    height: 5rem;
+    line-height: 5rem;
+    font-size: 2.5rem;
+}
+
+/* Choices */
+.choices {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    margin-top: 5rem;
+}
+
+.choice {
+    height: 170px;
+    width: 170px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s;
+}
+
+.choice:hover {
+    cursor: pointer;
+    background-color: black;
+}
+
+.choice:active {
+    transform: scale(0.92);
+}
+
+/* Images */
+.choice img {
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Score Board */
+.score-board {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    margin-top: 3rem;
+    font-size: 2rem;
+}
+
+.score {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.score p {
+    text-align: center;
+}
+
+#user-score,
+#comp-score {
+    font-size: 4rem;
+    line-height: 4rem;
+}
+
+/* Message */
+.msg-container {
+    margin-top: 5rem;
+}
+
+#msg {
+    display: inline-block;
+    background-color: aquamarine;
+    color: black;
+    font-size: 2rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    max-width: 90%;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    h1 {
+        height: 4rem;
+        line-height: 4rem;
+        font-size: 2rem;
+    }
+
+    .choices {
+        gap: 1rem;
+        margin-top: 3rem;
+        flex-wrap: wrap;
+    }
+
+    .choice {
+        width: 100px;
+        height: 100px;
+    }
+
+    .choice img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .score-board {
+        gap: 2rem;
+        margin-top: 3rem;
+        font-size: 1.2rem;
+    }
+
+    .score {
+        width: 120px;
+    }
+
+    #user-score,
+    #comp-score {
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+
+    .msg-container {
+        margin-top: 3rem;
+    }
+
+    #msg {
+        font-size: 1.1rem;
+        padding: 0.8rem;
+        max-width: 90%;
+    }
+}
+
+/* =========================
+   VERY SMALL PHONES
+========================= */
+
+@media (max-width: 350px) {
+
+    h1 {
+        font-size: 1.7rem;
+    }
+
+    .choices {
+        gap: 0.5rem;
+    }
+
+    .choice {
+        width: 85px;
+        height: 85px;
+    }
+
+    .choice img {
+        width: 75px;
+        height: 75px;
+    }
+
+    .score-board {
+        gap: 1rem;
+    }
+
+    .score {
+        width: 100px;
+    }
+
+    #user-score,
+    #comp-score {
+        font-size: 2.5rem;
+    }
+}
